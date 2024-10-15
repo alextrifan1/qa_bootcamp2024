@@ -1,4 +1,4 @@
-//Display all the prime numbers lower than 1 000 000. Name the class (and java file) PrimeNumbers
+package Tema1;//Display all the prime numbers lower than 1 000 000. Name the class (and java file) Tema1.PrimeNumbers
 
 
 public class PrimeNumbers {
