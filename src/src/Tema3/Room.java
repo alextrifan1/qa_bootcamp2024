@@ -32,7 +32,7 @@ public class Room {
     public String toString() {
         StringBuilder stb = new StringBuilder();
 
-        stb.append(getRoom_name()).append(" ");
+
         for(String s : furniture.keySet()) {
             stb.append(furniture.get(s)).append(" ").append(s).append(" ");
         }
