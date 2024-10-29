@@ -12,6 +12,7 @@
         <junitVersion>5.11.2</junitVersion>
         <lombokVershion>1.18.34</lombokVershion>
         <testNGVersion>7.10.2</testNGVersion>
+        <seleniumVersion>4.25.0</seleniumVersion>
     </properties>
 
     <dependencies>
@@ -38,6 +39,11 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
             <version>3.5.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${seleniumVersion}</version>
         </dependency>
     </dependencies>
 
