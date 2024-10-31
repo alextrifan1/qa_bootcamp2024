@@ -28,6 +28,16 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testAddition03() {
+        Assertions.assertEquals(0, c.compute(10, -10, "+") , "Addition fail");
+    }
+
+    @Test
+    public void testAddition04() {
+        Assertions.assertEquals(14.5, c.compute(14.5, 0, "+") , "Addition fail");
+    }
+
+    @Test
     public void testInvalidOperator() {
         IllegalArgumentException ex = Assertions.assertThrows(IllegalArgumentException.class, () ->
         {
@@ -54,6 +64,16 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testMultiplication02() {
+        Assertions.assertEquals(-100, c.compute(-10, 10,"*"), "Multiplication failed.");
+    }
+
+    @Test
+    public void testMultiplication03() {
+        Assertions.assertEquals(144, c.compute(-12, -12,"*"), "Multiplication failed.");
+    }
+
+    @Test
     public void testSquareRoot01() {
         Assertions.assertEquals(8, c.compute(64, 0, "SQRT"), "SQRT failed.");
     }
@@ -62,6 +82,11 @@ public class CalculatorTest {
     public void testSquareRoot02(){
         Assertions.assertEquals(Math.sqrt(2), c.compute(2, 0, "SQRT"), "SQRT failed.");
     }
+
+    @Test
+    public void testDivision01() {Assertions.assertEquals(3, c.compute(6, 2, "/"), "Division failed");}
+    @Test
+    public void testDivision02() {Assertions.assertEquals(0, c.compute(0, 2, "/"), "Division failed");}
 
     @AfterEach
     public void cleanTest() {
