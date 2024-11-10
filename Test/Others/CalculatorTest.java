@@ -1,4 +1,6 @@
-import Testare.Calculator;
+package Others;
+
+import Calculator.Calculator;
 import org.junit.jupiter.api.*;
 
 public class CalculatorTest {

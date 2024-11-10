@@ -1,8 +1,9 @@
-import Testare.Calculator;
+package Others;
+
+import Calculator.Calculator;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-import javax.naming.NameNotFoundException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
