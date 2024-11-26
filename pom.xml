@@ -16,6 +16,7 @@
         <jsonVersion>20240303</jsonVersion>
         <gsonVersion>2.9.0</gsonVersion>
         <surfireRunnerVersion>3.5.2</surfireRunnerVersion>
+        <suiteFile>/home/alex/Dev/qa_bootcamp2024/testSuites/petStoreSuite.xml</suiteFile>
     </properties>
 
     <dependencies>
@@ -89,7 +90,7 @@
                     <version>3.5.1</version>
                     <configuration>
                         <suiteXmlFiles>
-                            <suiteXmlFile>testSuites/juiceShopSuite.xml</suiteXmlFile>
+                            <suiteXmlFile>${suiteFile}</suiteXmlFile>
                         </suiteXmlFiles>
                         <properties>
                             <name>listener</name>
