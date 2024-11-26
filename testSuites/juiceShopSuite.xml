@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="juiceShop" verbose="1" >
+    <listeners>
+        <listener class-name="customReporting.CustomTestReporter"/>
+        <listener class-name="customReporting.CustomTestListener"/>
+    </listeners>
+    <test name="MainPage" >
+        <classes>
+            <class name="juiceShop.Tests.MainTest" />
+        </classes>
+    </test>
+    <test name="LoginPage" >
+        <classes>
+            <class name="juiceShop.Tests.LoginTest" />
+        </classes>
+    </test>
+    <test name="RegistrationPage" >
+        <classes>
+            <class name="juiceShop.Tests.RegisterTest" />
+        </classes>
+    </test>
+
+</suite>

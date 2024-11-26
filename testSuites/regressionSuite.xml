@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression" verbose="1" >
+    <test name="JuiceShop - MainPage" >
+        <classes>
+            <class name="juiceShop.Tests.MainTest" />
+        </classes>
+    </test>
+    <test name="JuiceShop - LoginPage" >
+        <classes>
+            <class name="juiceShop.Tests.LoginTest" />
+        </classes>
+    </test>
+    <test name="JuiceStore - RegistrationPage" >
+        <classes>
+            <class name="juiceShop.Tests.RegisterTest" />
+        </classes>
+    </test>
+    <test name="PetStore - Pet Tests" >
+        <classes>
+            <class name="petStore.PetTest" />
+        </classes>
+    </test>
+
+</suite>

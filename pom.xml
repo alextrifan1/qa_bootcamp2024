@@ -13,6 +13,9 @@
         <lombokVershion>1.18.34</lombokVershion>
         <testNGVersion>7.10.2</testNGVersion>
         <seleniumVersion>4.25.0</seleniumVersion>
+        <jsonVersion>20240303</jsonVersion>
+        <gsonVersion>2.9.0</gsonVersion>
+        <surfireRunnerVersion>3.5.2</surfireRunnerVersion>
     </properties>
 
     <dependencies>
@@ -45,6 +48,36 @@
             <artifactId>selenium-java</artifactId>
             <version>${seleniumVersion}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.5.0</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest</artifactId>
+            <version>3.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>${jsonVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gsonVersion}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.1.2</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -56,9 +89,20 @@
                     <version>3.5.1</version>
                     <configuration>
                         <suiteXmlFiles>
-                            <suiteXmlFile>/home/alex/Dev/qa_bootcamp2024/testSuites/runSuite.xml</suiteXmlFile>
+                            <suiteXmlFile>testSuites/juiceShopSuite.xml</suiteXmlFile>
                         </suiteXmlFiles>
+                        <properties>
+                            <name>listener</name>
+                            <value>customReporting.CustomTestListener, customReporting.CustomTestReporter</value>
+                        </properties>
                     </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.maven.surefire</groupId>
+                            <artifactId>surefire-testng</artifactId>
+                            <version>${surfireRunnerVersion}</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
             </plugins>
         </pluginManagement>
