@@ -37,6 +37,7 @@ public class UserTest extends BaseTest{
         User u = new User(Integer.parseInt(id), username, name, surname, email, password, phone, Integer.parseInt(status));
         Gson gson = new Gson();
         System.out.println(gson.toJson(u));
+        httpRequest.header("Content-Type", "application/json");
         httpRequest.body(gson.toJson(u));
         Response response = httpRequest.request(Method.POST, "/user");
         System.out.println(response.getBody().asString());
@@ -77,7 +78,7 @@ public class UserTest extends BaseTest{
 
 
     /************************************ POST ************************************/
-    @Test(dataProvider = "getUserDp")
+    @Test(dataProvider = "userDp")
     public void putUser(String id, String username, String firstName, String lastName, String email, String password, String phone, String userstatus) {
         User user = new User(Integer.parseInt(id), username, firstName, lastName, email, password, phone, Integer.parseInt(userstatus));
         Gson gson = new Gson();

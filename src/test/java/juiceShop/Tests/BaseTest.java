@@ -5,6 +5,7 @@ import juiceShop.frameworkUtils.Utils;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
 public class BaseTest {
     protected static final String baseUrl = Utils.getConfigProperty("baseUrl");
     protected WebDriver driver;
