@@ -16,7 +16,7 @@
         <jsonVersion>20240303</jsonVersion>
         <gsonVersion>2.9.0</gsonVersion>
         <surfireRunnerVersion>3.5.2</surfireRunnerVersion>
-        <suiteFile>/home/alex/Dev/qa_bootcamp2024/testSuites/petStoreSuite.xml</suiteFile>
+        <suiteFile>testSuites/petStoreSuite.xml</suiteFile>
     </properties>
 
     <dependencies>
