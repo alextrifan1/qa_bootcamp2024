@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -40,7 +41,16 @@ public class Utils {
 
         switch (browser) {
             case "chrome": {
-                driver = new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+                if(Boolean.parseBoolean(getConfigProperty("headless"))) {
+                    options.addArguments("--headless");
+
+                }
+                //options.setCapability("proxy", proxy);
+                driver = new ChromeDriver(options);
+                if(Boolean.parseBoolean(getConfigProperty("maximized"))) {
+                    driver.manage().window().maximize();
+                }
                 break;
             }
             case "firefox": {
